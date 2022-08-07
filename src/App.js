@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Counter from "./components/Counter";
 
 function App() {
   const [likes, setLikes] = useState(0);
@@ -6,11 +7,9 @@ function App() {
   
   return (
     <div className="App">
-      <h2>{likes}</h2>
+      <Counter />
       <h2>{value}</h2>
       <input value={value} onChange={(e) => setValue(e.target.value)}/>
-      <button onClick={() => setLikes(likes-1)}>Decrease</button>
-      <button onClick={() => setLikes(likes+1)}>Increase</button>
     </div>
   );
 }
